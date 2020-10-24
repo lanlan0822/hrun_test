@@ -1,0 +1,8 @@
+
+config:
+    name: 下单的测试套件
+
+testcases:
+-
+    name: 下单接口
+    testcase: testcases/order_testcase.yml

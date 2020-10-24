@@ -1,0 +1,10 @@
+name: 支付接口
+base_url: ${ENV(IP)}
+request:
+    url: $pay_url2
+    method: get
+
+validate:
+    - eq: ["status_code", 200]
+    - contains: [content,支付成功]
+

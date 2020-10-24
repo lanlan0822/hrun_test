@@ -1,0 +1,13 @@
+
+config:
+    name: 下订单的测试用例
+
+teststeps:
+-
+    name: 登录成功
+    api: api/login_api.yml
+
+-
+    name: 下单接口
+    api: api/order_api.yml
+

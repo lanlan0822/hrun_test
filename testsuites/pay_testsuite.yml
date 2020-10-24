@@ -1,0 +1,9 @@
+
+config:
+    name: 支付的测试套件
+
+testcases:
+-
+    name: 支付接口
+    testcase: testcases/pay_testcase.yml
+

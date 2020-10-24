@@ -1,0 +1,20 @@
+name: 下单接口
+base_url: ${ENV(IP)}
+variables:
+    message: 提交成功
+request:
+    url: /mtx/index.php?s=/index/buy/add.html
+    method: POST
+    headers:
+        X-Requested-With: ${ENV(X-Requested-With)}
+    data:
+        goods_id: 1
+        stock: 2
+        buy_type: goods
+        address_id: 600
+        payment_id: 1
+        spec: ""
+
+validate:
+    - eq: ["status_code", 200]
+    - contains: [content.msg,$message]

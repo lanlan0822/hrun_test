@@ -1,0 +1,10 @@
+
+config:
+    name: 登录参数化套件
+
+testcases:
+-
+    name: $title
+    testcase: testcases/login_testcase.yml
+    parameters:
+        title-accounts-pwd-msg: ${P(data/login.csv)}

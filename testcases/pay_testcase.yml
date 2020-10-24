@@ -1,0 +1,23 @@
+
+config:
+    name: 下订单的测试用例
+
+teststeps:
+-
+    name: 登录成功
+    api: api/login_api.yml
+-
+    name: 下单接口
+    api: api/order_api.yml
+    extract:
+        - pay_url1: content.data.jump_url
+
+-
+    name: 支付接口302_1
+    api: api/pay1_api.yml
+    extract:
+        - pay_url2: headers.Location
+-
+    name: 支付接口302_2
+    api: api/pay2_api.yml
+

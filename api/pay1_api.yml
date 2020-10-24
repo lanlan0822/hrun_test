@@ -1,0 +1,10 @@
+name: 支付接口
+base_url: ${ENV(IP)}
+request:
+    url: $pay_url1
+    method: POST
+    allow_redirects: False
+
+validate:
+    - eq: ["status_code", 302]
+
